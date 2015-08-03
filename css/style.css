@@ -491,7 +491,7 @@ body {
   display: inline-block;
   margin-left: 25px;
 }
-
+ 
 /** Darkens the first nav link "Meet Karma"*/
 .top-navigation  .links  .active a{
   color: #4c5058;
