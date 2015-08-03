@@ -434,123 +434,118 @@ th {
   padding: 0;
 }
 
-/** END RESET COPY **/
+/****************************** END RESET*************************************/
 body {
-  / **The border-box is useful to have on many elements as it can force margin and padding
-  to cut into the width and height of an area rather than expanding it. **/
+  /**The border-box is useful to have on many elements as it can force margin
+  & padding to cut into the width & height of an area rather than expanding it.**/
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 
+/** the centered container **/
+.content {
+  width: 960px;
 
-/* Navigation Section */
+  /* makes .content inside the .top-navigation always centered
+  The first value ("0") is the top and bottom margin,
+  the second value ("auto") is the left and right margin.  */
+  margin: 0 auto;
+  padding: 0px 0.938rem;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/*************************NAVIGATION SECTION *********************************/
+
+/*sets up top navigation fixed container **/
 .top-navigation {
   background-color: #fff;
   height: 4.375rem;
-
 
   /* allows the nav bar not to get lost as you scroll. It will always be there */
   position: fixed;
   width: 100%;
   /* insure the nav stays on top of other elements now that it is fixed. */
   z-index: 9999;
-
 }
 
-.content {
-  width: 960px;
-
-  /* makes .content inside the .top-navigation always centered
-  The first value ("0") is the top and bottom margin, the second value ("auto") is the left and right margin. T */
-  margin: 0 auto;
-  padding: 0px 0.938rem;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-
-
+/**navigation left side logo **/
+.top-navigation .logo{
+  margin-top: 1em;
+  float: left;
 }
 
+/** navigation right side links **/
 .top-navigation  .links {
   float: right;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  color: #838994;
   margin-top: 25px;
-  text-decoration: none;
-
-
 }
-.top-navigation .logo
-{
-  margin-top: 1em;
-  float: left;
-}
-.top-navigation .links
-{
+.top-navigation .links{
   list-style-type: none;
 }
 
-.top-navigation .links  li
-{
+.top-navigation .links  li{
   display: inline-block;
   margin-left: 25px;
-
 }
-.top-navigation  .links   .active a
-{
+
+/** Darkens the first nav link "Meet Karma"*/
+.top-navigation  .links  .active a{
   color: #4c5058;
   font-weight: 500;
 }
 
-.top-navigation .links li a
-{
-  text-decoration: none;
+/** ligtens the rest of the nav links and removes hyperlinks **/
+.top-navigation .links li a {
   color: #838994;
-
+  text-decoration: none;
 }
 
-
-.top-navigation  .links  a:hover
-{
+/*changes color and cursor when hoving over nav links **/
+.top-navigation  .links  a:hover {
   color: #333333;
   cursor: pointer;
-
-
 }
-.introduction
-{
+
+/********************* INTRODUCTION SECTION************************************/
+
+/**sets the background for the introduction section **/
+.introduction{
   background-image: url("../images/first-background.jpg");
   background-position: 0 bottom;
   background-repeat: no repeat;
   background-size: cover;
   height:45.938rem;
   overflow: auto;
-
-
 }
 
+/** for both introduction texts centers and makes text white **/
 .introduction h1, .introduction h3{
   text-align: center;
   color: white;
   font-weight:300;
-
-
 }
 
+/* for Introducing Karma */
 .introduction h1 {
     margin-top: 17.5rem;
     font-size: 3.125rem;
     margin-bottom: 1rem;
 }
+
+/*for Bring Wifi with you, everywhere you go*/
 .introduction h3 {
     margin-top: 0;
     font-size: 1.563rem;
 }
-.introduction .big-button
-{
+
+/* For the learn more button */
+.introduction .big-button {
   background-color: #f15a29;
   width: 9.688rem;
-  color: white;
   margin-top: 1.563rem;
   text-shadow: none;
   border-style: none;
@@ -561,44 +556,110 @@ body {
   /* centers the button */
   margin: 0 auto;
   display: block;
-
 }
-.introduction .big-button a
-{
+
+/*remove hyperlink style and color the text of button */
+.introduction .big-button a{
    text-decoration: none;
    color: white;
+
 }
 
-.cases h2
-{
-    font-size: 2.75rem;
-    font-weight: 300;
-    margin-top: 2.5em;
-  }
 
-.cases h3
-{
-    font-size: 1.5rem;
-    font-weight: 200;
-    margin-top: 1em;
+/********************* MIDDLE PAGE CASES SECTION*******************************/
+
+/**for "Everyone needs a little Karma text" */
+.cases h2{
+  font-size: 2.75rem;
+  font-weight: 300;
+  margin-top: 2.5em;
 }
 
-.devices img
-{
+/**for caption text for images **/
+.cases h3{
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 1em;
+}
+
+/*sizing images */
+.devices img{
   height: 128px;
   width:  128px;
 }
 
+/*allowing 3 divs containing image and text to be on one line */
 .cases .devices {
-    width: 33%;
-    display: inline-block;
-
-}
-
-.social ul li{
+  width: 33%;
   display: inline-block;
 }
+
+
+/********************* FOOTER SECTION********************************** ******/
+.social
+{
+  padding-bottom: 9.375rem;
+
+}
+/* grey line seperator */
 .social hr {
   border: 1px solid #eaebec;
   margin-top: 3em;
+}
+
+/* for "Join us on" text*/
+.social h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+}
+
+/* for social networking circles image list **/
+.social  ul{
+
+  /*remove padding from ul so it can be centered properly */
+  padding: 0;
+  list-style: none;
+
+}
+.social .icons  li{
+  display: inline-block;
+}
+
+/* creating circle around social network icons */
+.social .icons > li >i
+{
+  border-radius: 2.25em;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #eaebec;
+  /* to center img use text-align center and line height same as height*/
+  line-height: 2.5em;
+  margin:  0 .2em;
+
+}
+/*Coloring the social network icons */
+.social .icons .twitter{
+  color: #55acee;
+}
+
+.social .icons .instagram{
+  color: #3f729b;
+}
+
+.social .facebook{
+  color: #4c66a4;
+}
+
+
+/* for Karma mobility inc text*/
+.social h6 {
+  font-family: 'Roboto', sans-serif;
+  font-size: .9rem;
+  color:#838994;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
 }
