@@ -502,7 +502,7 @@ body {
 .top-navigation .links li a {
   color: #838994;
   text-decoration: none;
-}
+} 
 
 /*changes color and cursor when hoving over nav links **/
 .top-navigation  .links  a:hover {
